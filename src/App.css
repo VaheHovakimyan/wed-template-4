@@ -1,38 +1,320 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&family=Montserrat:wght@300;400&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  padding: 40px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
+  margin: 10px 0;
+  color: #d46a6a;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.subtitle {
+    /* font-family: "Dancing Script", cursive; */
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+.heart-icon, .detail-icon {
+  color: #d46a6a;
+  stroke-width: 2px;
+  margin: 0 10px;
+}
+
+.hero-slider {
+  margin: 20px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.slider-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-dots li button:before {
+  color: #d46a6a;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #d46a6a;
+}
+
+.couple-background {
+  position: relative;
+  height: 400px;
+  background-image: url('./images/poster_background.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 40px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.couple-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.couple-names {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.couple-names h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
   color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.App-link {
-  color: #61dafb;
+.couple-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: white;
+  font-style: italic;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.save-the-date {
+  margin: 40px 0;
+}
+
+.save-the-date h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #d46a6a;
+}
+
+.wedding-date {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.calendar-container {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.calendar-header {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #d46a6a;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-day {
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.calendar-day.empty {
+  visibility: hidden;
+}
+
+.calendar-day.wedding-day {
+  background-color: #f8e1e1;
+  color: #d46a6a;
+  font-weight: bold;
+}
+
+.wedding-heart {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: white;
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.locations-section {
+  margin: 60px 0;
+}
+
+.locations-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #d46a6a;
+  margin-bottom: 30px;
+}
+
+.locations-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.location-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.location-image {
+  height: 200px;
+}
+
+.location-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.location-content {
+  padding: 20px;
+}
+
+.location-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin: 0 0 10px;
+  color: #d46a6a;
+}
+
+.location-time {
+  font-weight: bold;
+  color: #666;
+  margin: 0 0 15px;
+}
+
+.location-description {
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  color: #d46a6a;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.map-link svg {
+  margin-left: 5px;
+}
+
+.rsvp {
+  margin: 60px 0 40px;
+}
+
+.rsvp h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #d46a6a;
+  margin-bottom: 20px;
+}
+
+.rsvp-button {
+  background-color: #d46a6a;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Playfair Display', serif;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.footer {
+  padding: 40px 0;
+  margin-top: 40px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.footer p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 3rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .couple-names {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .couple-names h2 {
+    font-size: 2.5rem;
+  }
+  
+  .calendar-day {
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .hero-slider .slider-item img {
+    height: 300px;
+  }
+  
+  .couple-background {
+    height: 300px;
   }
 }
