@@ -1,6 +1,5 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { Heart, Calendar, MapPin, Gift, Mail, ArrowRight } from "react-feather";
+import { Heart, Mail, ArrowRight } from "react-feather";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -78,23 +77,31 @@ const WeddingInvitation = () => {
         "Join us as we exchange vows in this beautiful garden setting",
       image:
         "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      time: "4:00 PM",
+      time: "12:00 PM",
       mapLink: "https://maps.google.com?q=Sunset+Gardens+123+Beautiful+Avenue",
     },
     {
-      title: "Reception",
+      title: "Փեսայի տուն",
       description: "Celebrate with dinner, dancing, and joy under the stars",
       image:
         "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      time: "6:00 PM",
+      time: "13:00 PM",
       mapLink: "https://maps.google.com?q=Sunset+Gardens+123+Beautiful+Avenue",
     },
     {
-      title: "After Party",
+      title: "Եկեղեցի",
       description: "Continue the celebration at our favorite lounge",
       image:
         "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      time: "10:00 PM",
+      time: "16:00",
+      mapLink: "https://maps.google.com?q=The+Lounge+456+Main+Street",
+    },
+    {
+      title: "Ռեստորան Նոր Դվին",
+      description: "Continue the celebration at our favorite lounge",
+      image:
+        "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      time: "18:00",
       mapLink: "https://maps.google.com?q=The+Lounge+456+Main+Street",
     },
   ];
@@ -249,6 +256,7 @@ const WeddingInvitation = () => {
       </motion.section>
 
       {/* Footer */}
+
       <motion.footer
         className="footer"
         initial={{ opacity: 0 }}
